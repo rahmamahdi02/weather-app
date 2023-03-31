@@ -2,10 +2,10 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from "react";
 import MyNavBar from './components/Navbar'
-import ListStudents from './components/ListStudents'
 import WeatherForm from "./components/weatherForm";
 import WeatherCard from "./components/weatherCard";
-
+import { Modal, Button } from "react-bootstrap";
+import ListStudents from './components/ListStudents';
 
 function App() {
 
@@ -30,16 +30,47 @@ function App() {
     loadCity();
   };
 
+  const [show, setShow] = useState(false);
+const handleClose = () => setShow(false);
+const handleShow = () => setShow(true);
+
+
   return (
-    <div className="App">
+    <div classNameNameName="App">
       <MyNavBar />
-      <ListStudents />
+
+
+<Button variant="primary" onClick={handleShow}>
+  click modal
+</Button>
+
+<Modal show={show} onHide={handleClose}>
+  <Modal.Header closeButton>
+    <Modal.Title>Modal heading</Modal.Title>
+  </Modal.Header>
+  <Modal.Body>Hello,you're reading this text in a modal!</Modal.Body>
+  <Modal.Footer>
+    <Button variant="secondary" onClick={handleClose}>
+      Close
+    </Button>
+    <Button variant="primary" onClick={handleClose}>
+      Save Changes
+    </Button>
+  </Modal.Footer>
+</Modal>
+
+
+
+
   <WeatherForm setCity={setCity} handleSubmit={handleSubmit} />
       {!result ? (
         <p>Please click the botton to see Data</p>
       ) : (
         <WeatherCard data={result} />
       )}
+
+<ListStudents />
+
     </div>
   )
 }
