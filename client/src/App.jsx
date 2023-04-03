@@ -40,7 +40,7 @@ const handleShow = () => setShow(true);
       <MyNavBar />
 
 
-<Button variant="primary" onClick={handleShow}>
+{/* <Button variant="primary" onClick={handleShow}>
   click modal
 </Button>
 
@@ -57,7 +57,7 @@ const handleShow = () => setShow(true);
       Save Changes
     </Button>
   </Modal.Footer>
-</Modal>
+</Modal> */}
 
 
 
