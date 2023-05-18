@@ -30,7 +30,7 @@ ul {
 }
 
 
-form {
+.weatherform {
   flex-direction: column;
   align-items: center;
   text-align: left;
@@ -70,4 +70,11 @@ button.btn.btn-primary {
 .card-body {
   margin-left: 2em;
   margin-right: 2em;
+}
+
+h1 {
+  margin-top: 100px;
+
+  text-align: center;
+
 }

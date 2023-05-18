@@ -62,14 +62,14 @@ const ListStudents = () => {
     return (
         <div className="mybody">
         <div className="list-students">
-            <h2>Techtonica Participants </h2>
+            <h2> Favorite Cities </h2>
             <ul>
                 {students.map((student) => {
                     return <li key={student.id}> <Student student={student} toDelete={onDelete} toUpdate={onUpdate} /></li>
                 })}
             </ul>
         </div>
-        <MyForm key={editingStudent ? editingStudent.id : null} onSaveStudent={onSaveStudent} editingStudent={editingStudent} onUpdateStudent={updateStudent} />
+        {/* <MyForm key={editingStudent ? editingStudent.id : null} onSaveStudent={onSaveStudent} editingStudent={editingStudent} onUpdateStudent={updateStudent} /> */}
         </div>
     );
 }

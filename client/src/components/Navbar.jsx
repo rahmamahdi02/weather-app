@@ -8,21 +8,21 @@ function MyNavBar(props) {
 
   return (
     <>
-    <Navbar bg="dark" variant="dark" sticky="top">
+    <Navbar bg="dark" variant="light" sticky="top">
       <Container>
         <Navbar.Brand href="/">
-        <img
+        {/* <img
               src={Logo}
               height="30"
               className="d-lg-inline-block"
               alt="React Bootstrap logo"
-            />
+            /> */}
         </Navbar.Brand>
-        <Nav.Link >Your Link</Nav.Link>
+        {/* <Nav.Link >Your Link</Nav.Link> */}
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>
-            Signed in as: <a href="#login">Cristina Rodriguez</a>
+            Signed in as: <a href="#login">Rahma Mahdi</a>
           </Navbar.Text>
         </Navbar.Collapse>
       </Container>
